@@ -674,7 +674,7 @@
 #resume-item[
 - Graduate-level training in quantitative methods, statistical modeling, survey design, and public policy evaluation. Thesis in progress.
 ]
-#resume-entry(title: "Licenciatura in Political Science (Equivalent to a Master’s Degree)",location: "Buenos Aires, Argentina",date: "mar 2016 - dic 2020",description: "National University of La Matanza",)
+#resume-entry(title: "Licenciatura in Political Science",location: "Buenos Aires, Argentina",date: "mar 2016 - dic 2020",description: "National University of La Matanza",)
 #resume-item[
 - Five-year degree combining advanced coursework and research. Considered equivalent to a Master's degree in international academic systems.
 ]
@@ -712,7 +712,7 @@
 ]
 = Community Involvement
 <community-involvement>
-#strong[R en Buenos Aires -- Organizer & Instructor ] \
+#strong[R en Buenos Aires -- Organizer & Instructor (2024 -- present)] \
 #link("https://github.com/renbaires")[R en Buenos Aires] is a local data science community that promotes the use of R in Spanish-speaking academic, public sector, and civil society contexts. The group organizes regular workshops, talks, and collaborative study spaces,
 
 #strong[Núcleo de Innovación Social -- Organizer (2023 -- present)] \

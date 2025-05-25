@@ -13,7 +13,7 @@ educacion <- tibble::tribble(
   "National University of Tres de Febrero", "Buenos Aires, Argentina", 
   "Graduate-level training in quantitative methods, statistical modeling, survey design, and public policy evaluation. Thesis in progress.",
   
-  "Licenciatura in Political Science (Equivalent to a Master’s Degree)", "2016-03-01", "2020-12-01", 
+  "Licenciatura in Political Science", "2016-03-01", "2020-12-01", 
   "National University of La Matanza", "Buenos Aires, Argentina", 
   "Five-year degree combining advanced coursework and research. Considered equivalent to a Master's degree in international academic systems.",
   

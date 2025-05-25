@@ -98,7 +98,7 @@ te |>
 
 ## Community Involvement
 
-**R en Buenos Aires – Organizer & Instructor **  
+**R en Buenos Aires – Organizer & Instructor (2024 – present)**  
 [R en Buenos Aires](https://github.com/renbaires) is a local data science community that promotes the use of R in Spanish-speaking academic, public sector, and civil society contexts. The group organizes regular workshops, talks, and collaborative study spaces, 
 
 
