@@ -1,0 +1,210 @@
+---
+title: "Ariana Bardauil's CV"
+author:
+  firstname: Ariana
+  lastname: Bardauil
+  address: "Buenos Aires, Argentina"
+  position: "Data Scientist・Political Science"
+  contacts:
+    - icon: fa envelope
+      text: arianabardauil@gmail.com
+      url: "mailto:arianabardauil@gmail.com"
+    - icon: assets/icon/bi-house-fill.svg
+      text: my portfolio
+      url: https://ariibard.github.io
+    - icon: fa brands github
+      text: GitHub
+      url: https://github.com/ariibard
+    - icon: fa brands linkedin
+      text: LinkedIn
+      url: https://linkedin.com/in/ariana-bardauil
+    - icon: fa phone
+      text: +54 9 11 3051 1306
+      url: ninguno 
+style:
+  color-accent: 6a1f9a
+format:
+  awesomecv-typst:
+    font-paths: ["assets/fonts/"]
+    keep-typ: true
+execute: 
+  echo: false
+  warning: false
+---
+```{r}
+library(typstcv)
+library(tidyverse)
+```
+
+## Education
+
+```{r echo = FALSE}
+#| output: asis
+educ <- read.csv("data/education.csv",
+                 colClasses = c("character", "Date", "Date", "character", "character"))
+
+educ |>
+  format_date(end = "end", sort_by = "start") |>
+  resume_entry(title = "degree",
+               description = "institution",
+               details = "detail")
+```
+
+## Professional Training
+
+```{r}
+#| output: asis
+
+pt <- read.csv("data/professional_training.csv",
+                 colClasses = c("character", "Date", "Date", "character", "character"))
+
+pt |>
+  format_date(end = "end", sort_by = "start") |>
+  typstcv::resume_entry(title = "title",
+               description = "institution")
+```
+
+## Work experience
+
+```{r}
+#| output: asis
+
+we <- read.csv("data/experiencia_laboral.csv",
+                 colClasses = c("character", "Date", "Date", "character", "character", "character"))
+
+we |>
+  format_date(end = "end", sort_by = "start") |>
+  typstcv::resume_entry(title = "position",
+               description = "organization",
+               details = c("description1", "description2"),
+               location = "location")
+```
+
+## Teaching experience
+
+```{r}
+#| output: asis
+
+te <- read.csv("data/teaching_experience.csv",
+                 colClasses = c("character", "Date", "Date", "character", "character", "character")) 
+te |>
+  format_date(end = "end", sort_by = "start") |>
+  typstcv::resume_entry(title = "position",
+               description = "institution",
+               details = c("description"),
+               location = "location")
+```
+
+
+## Community Involvement
+
+**R en Buenos Aires – Organizer & Instructor **  
+[R en Buenos Aires](https://github.com/renbaires) is a local data science community that promotes the use of R in Spanish-speaking academic, public sector, and civil society contexts. The group organizes regular workshops, talks, and collaborative study spaces, 
+
+
+**Núcleo de Innovación Social – Organizer (2023 – present)**  
+The [Núcleo de Innovación Social](https://nucleodeinnovacionsocial.com.ar/) is a collective focused on the ethical, political, and methodological challenges of data use in the public sphere. It brings together professionals from government, academia, and activism to co-create visualizations, applied research, and public communication tools.
+
+## Publications
+
+```{r}
+publis <- read.csv("data/publications.csv")
+```
+
+### Conference papers
+
+```{r}
+#| output: asis
+publis[publis$type == "Conference paper", ] |>
+  resume_entry(title = "title",
+               description = "detail",
+               details = "coauthors",
+               date = "date")
+```
+
+### Technical reports
+
+```{r}
+#| output: asis
+
+publis[publis$type == "Technical report", ] |>
+  resume_entry(title = "title",
+               description = "detail",
+               details = "coauthors",
+               date = "date")
+```
+
+### Book Chapter
+
+```{r}
+#| output: asis
+publis[publis$type == "Book chapter", ] |>
+  resume_entry(title = "title",
+               description = "detail",
+               details = "coauthors",
+               date = "date")
+```
+
+
+### Conference Presentations
+
+```{r}
+#| output: asis
+
+publis[publis$type == "Conference presentation", ] |>
+  resume_entry(title = "title",
+               description = "detail",
+               details = "coauthors",
+               date = "date")
+```
+
+## Research Experience
+
+### Current
+
+```{r}
+#| output: asis
+
+inv <- read.csv("data/investigacion.csv",
+                 colClasses = c("character", "Date", "Date", "character", "character", "character", "character")) 
+
+
+inv |> 
+  filter(end > Sys.Date())|>
+  format_date(end = "end", sort_by = "start") |>
+  resume_entry(title = "role",
+               description = "project",
+               location = "institution",
+               details = "description",
+               date = "date") 
+```
+
+### Previus
+
+```{r}
+#| output: asis
+
+inv |> 
+  filter(end < Sys.Date())|>
+  format_date(end = "end", sort_by = "start") |>
+  resume_entry(title = "role",
+               description = "project",
+               location = "institution",
+               details = "description",
+               date = "date")
+
+```
+
+
+## Skills
+
+```{r}
+#| output: asis
+
+
+skills <- read.csv("data/skills.csv") 
+
+skills|>
+  resume_entry(title = "area",
+               description = "skills")
+```
